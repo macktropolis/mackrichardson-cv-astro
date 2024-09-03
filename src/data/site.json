@@ -1,0 +1,18 @@
+{
+  "siteName": "Mack Richardson",
+  "description": "A FileMaker & Web Developer",
+  "version": "2.0.0",
+  "url": "https://mackrichardson.com",
+  "favicon": "/assets/favicon/favicon.ico",
+  "logo": "/assets/images/logo.svg",
+  "author": "Mack Richardson",
+  "phone": "+1 336.403.1746",
+  "email": "mack@mackrichardson.com",
+  "address1": "7295 Broad St",
+  "address2": "",
+  "addressCity": "Rural Hall",
+  "addressState": "NC",
+  "addressZIP": "27045",
+  "linkedin": "linkedin.com/in/macktropolis/",
+  "scheduler": "https://scheduler.zoom.us/mack-richardson"
+}

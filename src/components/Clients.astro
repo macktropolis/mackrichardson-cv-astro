@@ -1,0 +1,54 @@
+---
+// data imports
+import * as site from "../data/site.json";
+
+const { siteName, url, favicon, logo, author } = site;
+const title = "Trusted by";
+---
+
+<section id="clients">
+    <h3>{title}</h3>
+    <hr />
+    <section>
+        <img src="/assets/images/volvo-iron-mark.png" alt="Volvo" height="90" width="90" />
+        <img src="/assets/images/luminfire.png" alt="LuminFire" height="100" width="200" />
+        <img src="/assets/images/codence.png" alt="Codence" height="100" width="200" />
+        <img src="/assets/images/purchase-clinic.png" alt="Purchase Clinic" height="100" width="200" />
+        <img src="/assets/images/glow.png" alt="Glow Protein" height="80" width="150" />
+        <img src="/assets/images/craig-gilmore.png" alt="Craig Gilmore" height="80" width="150" />
+    </section>
+</section>
+
+<style>
+    #clients {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-inline: auto;
+        padding: 2rem;
+        width: 100%;
+    }
+    #clients section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-bottom: 5rem;
+        width: 100%;
+    }
+    #clients section img {
+        object-fit: cover;
+        object-position: 50%;
+    }
+    h3 {
+        font-size: 3rem;
+        text-align: center;
+    }
+    hr {
+        background-color: hsl(0, 0%, 96%, 0.25);
+        height: 5px;
+        margin-top: 2rem;
+        width: 3vw;
+    }
+</style>

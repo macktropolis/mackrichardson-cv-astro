@@ -1,0 +1,67 @@
+---
+const title = "Comixbin";
+const image = "/assets/images/comixbin.png";
+---
+
+<section class="project">
+    <div class="grid-ish">
+        <div class="details">
+            <article>
+                <h4>{title}</h4>
+                <hr />
+                <p>Comixbin makes managing your comic book collection easy. Comixbin is built with Claris FileMaker Pro for desktop and mobile devices.</p>
+                <h5>Features</h5>
+                <div class="card-wrapper">
+                    <div class="card">Multi-User Collection Management</div>
+                    <div class="card">Collection Loan Tracking</div>
+                    <div class="card">Wishlists</div>
+                    <div class="card">Issue Gap Reports</div>
+                </div>
+            </article>
+        </div>
+        <div class="featured-image">
+            <img src={image} alt={title} />
+        </div>
+    </div>
+</section>
+
+<style>
+    .project {
+        padding: 5rem;
+    }
+    h4,
+    h5 {
+        text-align: center;
+    }
+    h4 {
+        font-size: 3rem;
+    }
+    h5 {
+        font-size: 2rem;
+        margin-block: 1rem;
+    }
+    .featured-image img {
+        display: block;
+        height: auto;
+        object-fit: cover;
+        object-position: 50%;
+        border-radius: 2rem;
+        margin-inline: auto;
+        width: 100%;
+    }
+    .grid-ish {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-inline: auto;
+        max-width: 125ch;
+    }
+    .grid-ish > * {
+        flex: 1 1 50%;
+        padding-inline: 1rem;
+    }
+    .details {
+        display: grid;
+        align-items: center;
+    }
+</style>

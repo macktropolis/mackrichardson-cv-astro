@@ -1,0 +1,65 @@
+body {
+    background-color:hsl(252, 6%, 17%);
+    color: hsl(0, 0%, 97%);
+    font-family: "Lato", system-ui;
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    line-height: 150%;
+}
+hr {
+        background-color: hsl(0, 0%, 96%, 0.25);
+        height: 5px;
+        margin-top: 2rem;
+        width: 3vw;
+    }
+a {
+    color: hsl(204, 78%, 61%, 0.9);
+    text-decoration: none;
+}
+a:hover {
+    color: hsl(204, 78%, 61%, 1);
+}
+.button {
+    background-color: hsl(204, 78%, 61%);
+    color: hsl(0, 0%, 100%);
+    padding: 1rem 2rem;
+}
+.button:hover {
+    background-color: hsl(210, 57%, 44%);
+}
+.card-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1rem;
+}
+.card {
+    background-color: hsl(0, 0%, 96%, 0.15);
+    border-radius: 1rem;
+    display: grid;
+    align-items: center;
+    padding: 1rem 2rem;
+}

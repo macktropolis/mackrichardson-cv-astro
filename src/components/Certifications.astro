@@ -1,0 +1,50 @@
+---
+// data imports
+import * as site from "../data/site.json";
+
+const { siteName, url, favicon, logo, author } = site;
+const title = "Certifications";
+---
+
+<section id="certifications">
+    <h3>{title}</h3>
+    <hr />
+    <section>
+        <img src="/assets/images/claris-filemaker-pro-associate-badge.png" alt="Claris FileMaker Pro Associate" height="150" width="150" />
+        <img src="/assets/images/claris-filemaker-pro-specialist-badge.png" alt="Claris FileMaker Pro Specialist" height="150" width="150" />
+        <img src="/assets/images/claris-filemaker-pro-expert-badge.png" alt="Claris FileMaker Pro Expert" height="150" width="150" />
+        <img src="/assets/images/claris-filemaker-server-administrator-associate.png" alt="Claris FileMaker Server Administrator Associate" height="150" width="150" />
+        <img src="/assets/images/claris-connect-associate-badge.png" alt="Claris Connect Associate" height="150" width="150" />
+        <img src="/assets/images/claris-connect-specialist-badge.png" alt="Claris Connect Specialist" height="150" width="150" />
+    </section>
+    <a href="https://www.credly.com/users/mack-richardson" title="Mack Richardson's Credly Profiles" class="button">View All Credentials</a>
+</section>
+
+<style>
+    #certifications {
+        background: hsl(0, 0%, 96%, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-inline: auto;
+        padding: 2rem;
+        width: 100%;
+    }
+    #certifications section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-evenly;
+        margin-bottom: 3rem;
+        width: 100%;
+    }
+    h3 {
+        font-size: 4rem;
+        text-align: center;
+    }
+    hr {
+        margin-block: 2rem;
+    }
+</style>

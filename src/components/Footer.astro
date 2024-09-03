@@ -1,0 +1,56 @@
+---
+// data imports
+import * as site from "../data/site.json";
+
+const { siteName, url, favicon, logo, author } = site;
+const { title, description } = Astro.props;
+---
+
+<footer id="site-footer">
+    <section>
+        <img src={logo} alt={author + " Logo"} id="site-logo" height="100" width="100" />
+    </section>
+    <p>&copy<script type="text/javascript" is:inline>
+          document.write(new Date().getFullYear());
+        </script>. {author}. All Rights Reserved.</p>
+</footer>
+
+<style>
+    footer#site-footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-inline: auto;
+        padding: 4rem;
+        width: 100%;
+    }
+    footer#site-footer section {
+        display: grid;
+        justify-content: center;
+    }
+    footer#site-footer section #site-logo {
+        filter: invert(66%) sepia(27%) saturate(4932%) hue-rotate(178deg) brightness(102%) contrast(83%);
+    }
+    nav#footer-nav {
+        background-color: hsl(0, 0%, 96%, 0.15);
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+        width: clamp(20vw, 50ch, 100vw);
+    }
+    nav#footer-nav ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    nav#footer-nav ul > li {
+        flex: 1 1 1rem;
+        padding: 0;
+        text-align: center;
+    }
+    nav#footer-nav ul > li > a {
+        text-transform: uppercase;
+    }
+</style>

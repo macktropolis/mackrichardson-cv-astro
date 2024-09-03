@@ -1,0 +1,67 @@
+---
+const title = "Craig Gilmore";
+const image = "/assets/images/craig-gilmore.jpg";
+---
+
+<section class="project">
+    <div class="grid-ish">
+        <div class="featured-image">
+            <img src={image} alt={title} />
+        </div>
+        <div class="details">
+            <article>
+                <h4>{title}</h4>
+                <hr />
+                <p><a href="https://craiggilmore.net" title="Craig Gilmore, Official Website" target="_blank">CraigGilmore.net</a> is the official website for Craig Gilmore, a professional illustrator, storyboard and comic book artist. Craig has illustrated storyboards for major motion pictures and television series ( including the AMC hit series, <em>The Walking Dead</em> ) and comic books for Marvel and DC. His latest project is a graphic novel, <em>Ethereal: A Tale</em></p>
+                <h5>Services</h5>
+                <div class="card-wrapper">
+                    <div class="card">Brand Design</div>
+                    <div class="card">Website Design</div>
+                    <div class="card">WordPress Development</div>
+                    <div class="card">Hosting</div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<style>
+    .project {
+        padding: 5rem;
+    }
+    h4,
+    h5 {
+        text-align: center;
+    }
+    h4 {
+        font-size: 3rem;
+    }
+    h5 {
+        font-size: 2rem;
+        margin-block: 1rem;
+    }
+    .featured-image img {
+        display: block;
+        height: auto;
+        object-fit: cover;
+        object-position: 50%;
+        border-radius: 2rem;
+        margin-inline: auto;
+        width: 100%;
+    }
+    .grid-ish {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-inline: auto;
+        max-width: 125ch;
+    }
+    .grid-ish > * {
+        flex: 1 1 50%;
+        padding-inline: 1rem;
+    }
+    .details {
+        display: grid;
+        align-items: center;
+    }
+</style>

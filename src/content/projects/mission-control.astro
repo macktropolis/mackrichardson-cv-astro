@@ -1,0 +1,63 @@
+---
+const title = "Mission Control";
+const image = "/assets/images/mission-control-collage.jpg";
+---
+
+<section class="project">
+    <div class="grid-ish">
+        <div class="details">
+            <article>
+                <h4>{title}</h4>
+                <hr />
+                <p>This is a FileMaker app that helps me manage my world.</p>
+            </article>
+        </div>
+        <div class="featured-image">
+            <img src={image} alt={title} />
+        </div>
+    </div>
+</section>
+
+<style>
+    .project {
+        padding: 5rem;
+    }
+    h4,
+    h5 {
+        text-align: center;
+    }
+    h4 {
+        font-size: 3rem;
+    }
+    h5 {
+        font-size: 2rem;
+        margin-block: 1rem;
+    }
+    hr {
+        margin-bottom: 1rem;
+    }
+    .featured-image img {
+        display: block;
+        height: auto;
+        object-fit: cover;
+        object-position: 0 0;
+        border-radius: 2rem;
+        margin-inline: auto;
+        width: 100%;
+    }
+    .grid-ish {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-inline: auto;
+        max-width: 125ch;
+    }
+    .grid-ish > * {
+        flex: 1 1 50%;
+        padding-inline: 1rem;
+    }
+    .details {
+        display: grid;
+        align-items: center;
+    }
+</style>

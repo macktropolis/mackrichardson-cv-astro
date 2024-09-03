@@ -1,0 +1,78 @@
+---
+import * as site from "../data/site.json";
+
+const { email, scheduler } = site;
+//const { title, description } = Astro.props;
+
+const title = "My Mission";
+const image = "/assets/images/mack-richardson-2.png";
+const mailto = "mailto:" + email;
+---
+
+<section class="project" id="mission">
+    <div class="grid-ish">
+        <div class="featured-image">
+            <img src={image} alt={title} />
+        </div>
+        <div class="details">
+            <article>
+                <h4>{title}</h4>
+                <p>Create smart, effective and beautiful FileMaker solutions and websites that help people solve real-world problems.</p>
+                <div class="buttons">
+                    <a href={mailto} title="Email Mack" class="button"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp; Email Me</a>
+                    <a href={scheduler} title="Schedule a Call" class="button"><i class="fa-solid fa-calendar-days"></i>&nbsp;&nbsp;Schedule a Meeting</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<style>
+    #mission {
+        background: hsl(0, 0%, 96%, 0.2);
+    }
+    .project {
+        padding: 5rem;
+    }
+    .project h4 {
+        color: hsl(204, 78%, 61%);
+        font-size: 5rem;
+    }
+    .project p {
+        font-family: "Playfair Display", system-ui;
+        font-optical-sizing: auto;
+        font-size: 2.5rem;
+        font-weight: 900;
+        font-style: normal;
+        letter-spacing: -1px;
+        line-height: 125%;
+        margin-bottom: 3rem;
+    }
+    .featured-image img {
+        display: block;
+        height: auto;
+        border-radius: 2rem;
+        margin-inline: auto;
+        max-width: 80%;
+    }
+    .grid-ish {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-inline: auto;
+        max-width: 125ch;
+    }
+    .grid-ish > * {
+        flex: 1 1 50%;
+        padding-inline: 1rem;
+    }
+    .details {
+        display: grid;
+        align-items: center;
+    }
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+</style>

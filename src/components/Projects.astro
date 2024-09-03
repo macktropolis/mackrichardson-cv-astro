@@ -1,0 +1,47 @@
+---
+// data imports
+import * as site from "../data/site.json";
+import MissionControl from "../content/projects/mission-control.astro";
+import CraigGilmore from "../content/projects/craig-gilmore.astro";
+import ComixBin from "../content/projects/comixbin.astro";
+
+const { siteName, url, favicon, logo, author } = site;
+const title= "Projects";
+---
+
+<section id="projects">
+    <div id="projects-stop"></div>
+    <h3>{title}</h3>
+    <hr />
+    <MissionControl />
+    <CraigGilmore />
+    <ComixBin />
+</section>
+
+<style>
+    #projects {
+        position: relative;
+        padding: 5rem 0;
+    }
+    #projects-stop {
+        position: absolute;
+        height: 50px;
+        top: -70px;
+        width: 100%;
+    }
+    h3 {
+        font-size: 5rem;
+        text-align: center;
+    }
+    .grid-ish {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-inline: auto;
+        max-width: 125ch;
+    }
+    .grid-ish > * {
+        flex: 1 1 50%;
+        padding-inline: 1rem;
+    }
+</style>

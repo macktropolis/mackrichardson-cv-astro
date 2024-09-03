@@ -1,0 +1,94 @@
+---
+// data imports
+import * as site from "../data/site.json";
+
+const { siteName, url, favicon, logo, author } = site;
+const { title, description } = Astro.props;
+---
+<section id="profile">
+    <img src="/assets/images/mack-richardson.jpg" alt="Mack Richardson" width="500" height="500" id="profile-pic" />
+    <div class="grid-ish">
+        <div class="bio">
+            <p>Mack Richardson is a seasoned FileMaker and web developer with over two decades of experience. He has a passion for creating efficient, user-friendly applications that solve real-world problems.</p>
+            <div id="social">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-codepen"></i>
+                <a href="#mission" class="button">Contact Me</a>
+            </div>     
+        </div>
+        <div class="timeline">
+            <ul>
+                <li><date>2024</date> Joined LuminFire as Solutions Architect</li>
+                <li><date>2023</date> Joined Codence as Application Developer</li>
+                <li><date>2022</date> Redesigned MackRichardson.com</li>
+                <li><date>2022</date> Redesigned CraigGilmore.net</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<style>
+    #profile {
+        padding: 10rem 5rem;
+    }
+    .grid-ish {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-inline: auto;
+        max-width: 125ch;
+    }
+    .grid-ish > * {
+        flex: 1 1 50%;
+        padding-inline: 1.5rem;
+    }
+    .bio {
+        margin-bottom: 2rem;
+    }
+    .bio p {
+        font-family: "Playfair Display", system-ui;
+        font-optical-sizing: auto;
+        font-weight: 900;
+        font-size: 2.5rem;
+        font-style: normal;
+        letter-spacing: -2px;
+        line-height: 125%;
+    }
+    .bio > div {
+        margin-top: 3rem;
+    }
+    .bio > div > i {
+        color: hsl(204, 78%, 61%);
+        font-size: 2.5rem;
+        margin-right: 2rem;
+    }
+    .bio p {
+        margin: 0;
+    }
+    #profile-pic {
+        border-radius: 100%;
+        display: block;
+        margin-bottom: 5rem;
+        margin-inline: auto;
+        height: auto;
+        width: 90%;
+        min-width: 250px;
+        max-width: 500px;
+    }
+    .timeline ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .timeline ul li {
+        border-bottom: 1px solid hsl(204, 78%, 61%, 50%);
+        padding: 2rem 0;
+    }
+    .timeline ul li date {
+        display: block;
+        color: hsl(204, 78%, 61%);
+        font-weight: bold;
+        margin-right: 1rem;
+    }
+</style>
