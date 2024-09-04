@@ -57,14 +57,19 @@ const mailto = "mailto:" + email;
     }
     .grid-ish {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
         margin-inline: auto;
-        max-width: 125ch;
+        max-width: 100ch;
     }
-    .grid-ish > * {
-        flex: 1 1 50%;
-        padding-inline: 1rem;
+    @media screen and (min-width: 1024px) {
+        .grid-ish {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .grid-ish > * {
+            flex: 1 1 50%;
+            padding-inline: 1rem;
+        }
     }
     .details {
         display: grid;
@@ -72,6 +77,7 @@ const mailto = "mailto:" + email;
     }
     .buttons {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
         gap: 1rem;
     }

@@ -40,28 +40,10 @@ const image = "/assets/images/craig-gilmore.jpg";
         font-size: 2rem;
         margin-block: 1rem;
     }
-    .featured-image img {
-        display: block;
-        height: auto;
-        object-fit: cover;
-        object-position: 50%;
-        border-radius: 2rem;
-        margin-inline: auto;
-        width: 100%;
-    }
-    .grid-ish {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-inline: auto;
-        max-width: 125ch;
-    }
-    .grid-ish > * {
-        flex: 1 1 50%;
-        padding-inline: 1rem;
-    }
-    .details {
-        display: grid;
-        align-items: center;
+
+    @media screen and (min-width: 960px) {
+        .grid-ish > *:first-child {
+            order: 2;
+        }
     }
 </style>

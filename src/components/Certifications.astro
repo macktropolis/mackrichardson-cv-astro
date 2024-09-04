@@ -8,7 +8,6 @@ const title = "Certifications";
 
 <section id="certifications">
     <h3>{title}</h3>
-    <hr />
     <section>
         <img src="/assets/images/claris-filemaker-pro-associate-badge.png" alt="Claris FileMaker Pro Associate" height="150" width="150" />
         <img src="/assets/images/claris-filemaker-pro-specialist-badge.png" alt="Claris FileMaker Pro Specialist" height="150" width="150" />
@@ -28,7 +27,7 @@ const title = "Certifications";
         justify-content: center;
         align-items: center;
         margin-inline: auto;
-        padding: 2rem;
+        padding: 4rem;
         width: 100%;
     }
     #certifications section {
@@ -37,14 +36,21 @@ const title = "Certifications";
         flex-wrap: wrap;
         gap: 1rem;
         justify-content: space-evenly;
-        margin-bottom: 3rem;
+        margin-block: 5rem;
+        max-width: 100ch;
         width: 100%;
+    }
+    #certifications section img {
+        filter: grayscale(100%);
+        opacity: 0.8;
+        transition: opacity 0.4s ease-in-out, filter 0.4s ease-in-out;
+    }
+    #certifications section img:hover {
+        filter: grayscale(0);
+        opacity: 1;
     }
     h3 {
         font-size: 4rem;
         text-align: center;
-    }
-    hr {
-        margin-block: 2rem;
     }
 </style>

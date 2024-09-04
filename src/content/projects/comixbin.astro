@@ -5,6 +5,9 @@ const image = "/assets/images/comixbin.png";
 
 <section class="project">
     <div class="grid-ish">
+        <div class="featured-image">
+            <img src={image} alt={title} />
+        </div>
         <div class="details">
             <article>
                 <h4>{title}</h4>
@@ -18,9 +21,6 @@ const image = "/assets/images/comixbin.png";
                     <div class="card">Issue Gap Reports</div>
                 </div>
             </article>
-        </div>
-        <div class="featured-image">
-            <img src={image} alt={title} />
         </div>
     </div>
 </section>
@@ -39,29 +39,5 @@ const image = "/assets/images/comixbin.png";
     h5 {
         font-size: 2rem;
         margin-block: 1rem;
-    }
-    .featured-image img {
-        display: block;
-        height: auto;
-        object-fit: cover;
-        object-position: 50%;
-        border-radius: 2rem;
-        margin-inline: auto;
-        width: 100%;
-    }
-    .grid-ish {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-inline: auto;
-        max-width: 125ch;
-    }
-    .grid-ish > * {
-        flex: 1 1 50%;
-        padding-inline: 1rem;
-    }
-    .details {
-        display: grid;
-        align-items: center;
     }
 </style>

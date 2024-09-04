@@ -46,9 +46,11 @@ a:hover {
     background-color: hsl(204, 78%, 61%);
     color: hsl(0, 0%, 100%);
     padding: 1rem 2rem;
+    transition: all 0.4s ease;
 }
 .button:hover {
     background-color: hsl(210, 57%, 44%);
+    color: hsl(0, 0%, 100%);
 }
 .card-wrapper {
         display: grid;
@@ -62,4 +64,40 @@ a:hover {
     display: grid;
     align-items: center;
     padding: 1rem 2rem;
+}
+.center {
+    text-align: center;
+}
+.featured-image {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.featured-image img {
+    display: block;
+    height: auto;
+    object-fit: cover;
+    object-position: 0 0;
+    border-radius: 2rem;
+    margin-inline: auto;
+    width: 100%;
+}
+.grid-ish {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-inline: auto;
+    max-width: 125ch;
+}
+.grid-ish > * {
+    flex: 1 1 50%;
+    padding-inline: 1rem;
+}
+.grid-ish .details {
+    display: grid;
+    align-items: center;
+}
+.grid-ish .details hr {
+    margin-bottom: 2rem;
 }
