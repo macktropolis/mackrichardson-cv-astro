@@ -1,6 +1,7 @@
 ---
 // data imports
 import * as site from "../data/site.json";
+import Brand from "./Brand.astro";
 import Social from "./Social.astro";
 
 const { siteName, url, favicon, logo, author } = site;
@@ -8,9 +9,7 @@ const { title, description } = Astro.props;
 ---
 
 <footer id="site-footer">
-    <section>
-        <img src={logo} alt={author + " Logo"} id="site-logo" height="100" width="100" />
-    </section>
+    <Brand />
     <p>&copy<script type="text/javascript" is:inline>
           document.write(new Date().getFullYear());
         </script>. {author}. All Rights Reserved.</p>
@@ -29,13 +28,6 @@ const { title, description } = Astro.props;
     }
     footer#site-footer p {
         margin-bottom: -1rem;
-    }
-    footer#site-footer section {
-        display: grid;
-        justify-content: center;
-    }
-    footer#site-footer section #site-logo {
-        filter: invert(66%) sepia(27%) saturate(4932%) hue-rotate(178deg) brightness(102%) contrast(83%);
     }
     nav#footer-nav {
         background-color: hsl(0, 0%, 96%, 0.15);

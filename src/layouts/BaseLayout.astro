@@ -12,6 +12,7 @@ const { title, description } = Astro.props;
 <html lang="en">
     <Head title={title} description={description} />
   <body>
+    <div id="home"></div>
     <Header slot="header" />
     <main>
       <slot />
@@ -20,3 +21,13 @@ const { title, description } = Astro.props;
     <Foot />
   </body>
 </html>
+
+<style>
+  #home {
+    position: absolute;
+    height: 1px;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+</style>
