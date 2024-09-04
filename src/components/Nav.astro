@@ -1,0 +1,63 @@
+<nav id="site-nav">
+    <ul>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#projects-stop">Projects</a></li>
+        <li><a href="#mission">Mission</a></li>
+    </ul>
+</nav>
+
+<style>
+    nav#site-nav {
+        background-color: hsl(0, 0%, 96%, 0.15);
+        border-radius: 1rem;
+        width: clamp(20vw, 50ch, 100vw);
+    }
+    nav#site-nav ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    nav#site-nav ul > li {
+        flex: 1 1 1rem;
+        padding: 0;
+        text-align: center;
+    }
+    a {
+        color: hsl(48, 11%, 91%, 0.9);
+        font-weight: 700;
+        position: relative;
+        text-decoration: none; /* Remove the default underline */
+        text-transform: uppercase;
+        transition: all 0.4s ease;
+    }
+    a:hover {
+        color: hsl(204, 78%, 61%, 1);
+    }
+    a::before,
+    a::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        width: 0;
+        height: 3px; /* Thickness of the line */
+        background-color: hsl(204, 78%, 61%);
+        transition: width 0.4s ease, left 0.4s ease, opacity 0.4s ease;
+        opacity: 0;
+    }
+    a::before {
+        top: 0; /* Position line above the text */
+        transform: translateY(-50%); /* Adjust to align with vertical center */
+    }
+    a::after {
+        bottom: 0; /* Position line below the text */
+        transform: translateY(50%); /* Adjust to align with vertical center */
+    }
+    a:hover::before,
+    a:hover::after {
+        left: 0;
+        width: 100%;
+        opacity: 1;
+    }
+</style>

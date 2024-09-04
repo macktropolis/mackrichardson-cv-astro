@@ -1,6 +1,7 @@
 ---
 // data imports
 import * as site from "../data/site.json";
+import Social from "./Social.astro";
 
 const { siteName, url, favicon, logo, author } = site;
 const { title, description } = Astro.props;
@@ -10,15 +11,8 @@ const { title, description } = Astro.props;
     <div class="grid-ish">
         <div class="bio">
             <p>Mack Richardson is a seasoned FileMaker and web developer with over two decades of experience. He has a passion for creating efficient, user-friendly applications that solve real-world problems.</p>
-            <div id="social">
-                <a href="https://facebook.com/macktropolis" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://linkedin.com/in/macktropolis" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://twitter.com/Macktropolis" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://codepen.io/macktropolis" target="_blank"><i class="fa-brands fa-codepen"></i></a>
-                <a href="https://instagram.com/Macktropolis" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                
-            </div>
             <a href="#mission" class="button">Contact Me</a>
+            <Social />
         </div>
         <div class="timeline">
             <h5 class="center">Work Experience</h5>
@@ -46,6 +40,13 @@ const { title, description } = Astro.props;
                     IT Operations Manager
                 </li>
                 <li>
+                    <date>2014 - 2017</date>
+                    <span>&rarr;</span>
+                    <b>Purchase Clinic</b> 
+                    <span>&rarr;</span>
+                    Web Developer
+                </li>
+                <li>
                     <date>2008 - 2022</date>
                     <span>&rarr;</span>
                     <b>Volvo Group</b> 
@@ -65,14 +66,9 @@ const { title, description } = Astro.props;
         font-size: 2rem;
     }
     .grid-ish {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-inline: auto;
         max-width: 100ch;
     }
     .grid-ish > * {
-        flex: 1 1 50%;
         padding-inline: 2rem;
     }
     .bio {
@@ -84,22 +80,9 @@ const { title, description } = Astro.props;
         font-weight: 900;
         font-size: 2.5rem;
         font-style: normal;
-        letter-spacing: -2px;
+        letter-spacing: -1px;
         line-height: 125%;
-    }
-    .bio > div {
-        margin-top: 3rem;
-    }
-    .bio > div > a {
-        color: hsl(204, 78%, 61%);
-        font-size: 2.5rem;
-        margin-right: 2rem;
-    }
-    .bio p {
-        margin: 0;
-    }
-    #social {
-        margin-bottom: 3rem;
+        margin-bottom: inherit;
     }
     #profile-pic {
         border-radius: 100%;
