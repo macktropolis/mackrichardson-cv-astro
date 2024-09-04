@@ -10,11 +10,12 @@ const { title } = Astro.props;
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W6EF5LD9QT"></script>
     <script>
+    let dataLayer = [];
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    gtag('js', {});
 
-    gtag('config', 'G-W6EF5LD9QT');
+    gtag('config', 'G-W6EF5LD9QT', {});
     </script>
 
     <!-- Global Metadata -->
