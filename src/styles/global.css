@@ -59,8 +59,9 @@ a:hover {
         gap: 1rem;
 }
 .card {
-    background-color: hsl(0, 0%, 96%, 0.15);
+    background-color: hsl(0, 0%, 100%, 0.50);;
     border-radius: 1rem;
+    color: hsl(252, 6%, 17%);
     display: grid;
     align-items: center;
     padding: 1rem 2rem;

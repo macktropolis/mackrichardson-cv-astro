@@ -1,7 +1,12 @@
-/* CSS Mini Reset */
+/* ============================================
 
-/* Reset box-model and set borders */
-/* ============================================ */
+# CSS Mini Reset
+
+## Update 2024-09-04
+- Added max-width to `p`, `li` and `figcaption`
+- Added `container-type` to `body > :is(header, footer)`, `main`, `section` and `article`
+
+============================================ */
 
 *,
 ::before,
@@ -62,7 +67,10 @@ h6 {
   text-wrap: balance;
 }
 
-p {
+p,
+li,
+figcaption {
+  max-width: 65ch;
   text-wrap: pretty;
 }
 
@@ -79,4 +87,11 @@ td {
 
 img {
   border: 0;
+}
+
+body > :is(header, footer),
+main,
+section,
+article {
+  container-type: inline-size;
 }
