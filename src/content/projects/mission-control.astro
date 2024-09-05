@@ -14,13 +14,14 @@ const image = "/assets/images/projects/mission-control-collage.png";
                 <hr />
                 <p>Mission Control started as a small FileMaker app to help me keep track of Custom Functions I use regularly. Over the years of development, it now helps me control and manage most of the regular aspects of being a FileMaker Developer. It has libraries to store keyboard shortcuts, custom functions, useful websites. It also acts as a hub for easy access to other FileMaker solutions I've built, such as, a theme vault, default fields XML generator and a development starter file. Mission Control helps me stay on target when developing with FileMaker Pro.</p>
                 <h5>Features</h5>
-                <div class="card-wrapper">
-                    <div class="card">FileMaker Theme Vault</div>
-                    <div class="card">Default Fields XML Generator</div>
-                    <div class="card">fmBuilder Starter Solution</div>
-                    <div class="card">Custom Functions Library</div>
-                    <div class="card">Useful Websites Library</div>
-                    <div class="card">...more added regularly</div>
+                <div class="features">
+                    <ul>
+                        <li><i class="fa-solid fa-square-check"></i> FileMaker Theme Vault</li>
+                        <li><i class="fa-solid fa-square-check"></i> Default Fields XML Generator</li>
+                        <li><i class="fa-solid fa-square-check"></i> fmBuilder Starter Solution</li>
+                        <li><i class="fa-solid fa-square-check"></i> Custom Functions Library</li>
+                        <li><i class="fa-solid fa-square-check"></i> Useful Websites Library</li>
+                    </ul>
                 </div>
             </article>
         </div>
@@ -31,18 +32,39 @@ const image = "/assets/images/projects/mission-control-collage.png";
     .project {
         padding: 5rem;
     }
-    h4,
-    h5 {
-        text-align: center;
-    }
     h4 {
         font-size: 3rem;
+        text-align: center;
     }
     h5 {
         font-size: 2rem;
         margin-block: 1rem;
+        text-align: left;
     }
     hr {
         margin-bottom: 1rem;
+    }
+    .features ul {
+        font-size: 1rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .features ul li {
+        border-bottom: 1px solid hsl(0, 0%, 100%, 0.5);
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: start;
+        align-items: center;
+        padding: 1rem 0;
+        max-width: 100%;
+    }
+    .features ul li i {
+        color: hsl(204, 78%, 61%);
+        font-size: 1.2rem;
+        display: block;
+        margin-right: 1rem;
     }
 </style>

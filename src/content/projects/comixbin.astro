@@ -14,11 +14,13 @@ const image = "/assets/images/projects/comixbin.png";
                 <hr />
                 <p>Comixbin makes managing your comic book collection easy. Comixbin is built with Claris FileMaker Pro for desktop and mobile devices.</p>
                 <h5>Features</h5>
-                <div class="card-wrapper">
-                    <div class="card">Multi-User Collection Management</div>
-                    <div class="card">Collection Loan Tracking</div>
-                    <div class="card">Wishlists</div>
-                    <div class="card">Issue Gap Reports</div>
+                <div class="features">
+                    <ul>
+                        <li><i class="fa-solid fa-square-check"></i> Multi-User Collection Management</li>
+                        <li><i class="fa-solid fa-square-check"></i> Collection Loan Tracking</li>
+                        <li><i class="fa-solid fa-square-check"></i> Wishlists</li>
+                        <li><i class="fa-solid fa-square-check"></i> Issue Gap Reports</li>
+                    </ul>
                 </div>
             </article>
         </div>
@@ -30,15 +32,36 @@ const image = "/assets/images/projects/comixbin.png";
         padding: 5rem;
         padding-bottom: 0;
     }
-    h4,
-    h5 {
-        text-align: center;
-    }
     h4 {
         font-size: 3rem;
+        text-align: center;
     }
     h5 {
         font-size: 2rem;
         margin-block: 1rem;
+        text-align: left;
+    }
+    .features ul {
+        font-size: 1rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .features ul li {
+        border-bottom: 1px solid hsl(0, 0%, 100%, 0.5);
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: start;
+        align-items: center;
+        padding: 1rem 0;
+        max-width: 100%;
+    }
+    .features ul li i {
+        color: hsl(204, 78%, 61%);
+        display: block;
+        font-size: 1.2rem;
+        margin-right: 1rem;
     }
 </style>

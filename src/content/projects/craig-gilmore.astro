@@ -14,11 +14,13 @@ const image = "/assets/images/projects/craig-gilmore.png";
                 <hr />
                 <p><a href="https://craiggilmore.net" title="Craig Gilmore, Official Website" target="_blank">CraigGilmore.net</a> is the official website for Craig Gilmore, a professional illustrator, storyboard and comic book artist. Craig has illustrated storyboards for major motion pictures and television series ( including the AMC hit series, <em>The Walking Dead</em> ) and comic books for Marvel and DC. His latest project is a graphic novel, <em>Ethereal: A Tale</em></p>
                 <h5>Services</h5>
-                <div class="card-wrapper">
-                    <div class="card">Brand Design</div>
-                    <div class="card">Website Design</div>
-                    <div class="card">WordPress Development</div>
-                    <div class="card">Hosting</div>
+                <div class="features">
+                    <ul>
+                        <li><i class="fa-solid fa-square-check"></i> Brand Design</li>
+                        <li><i class="fa-solid fa-square-check"></i> Website Design</li>
+                        <li><i class="fa-solid fa-square-check"></i> WordPress Development</li>
+                        <li><i class="fa-solid fa-square-check"></i> Hosting</li>
+                    </ul>
                 </div>
             </article>
         </div>
@@ -29,18 +31,39 @@ const image = "/assets/images/projects/craig-gilmore.png";
     .project {
         padding: 5rem;
     }
-    h4,
-    h5 {
-        text-align: center;
-    }
     h4 {
         font-size: 3rem;
+        text-align: center;
     }
     h5 {
         font-size: 2rem;
         margin-block: 1rem;
+        text-align: right;
     }
-
+    .features ul {
+        font-size: 1rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: right;
+        width: 100%;
+    }
+    .features ul li {
+        border-bottom: 1px solid hsl(0, 0%, 100%, 0.5);
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: end;
+        align-items: center;
+        padding: 1rem 0;
+        max-width: 100%;
+    }
+    .features ul li i {
+        color: hsl(204, 78%, 61%);
+        font-size: 1.2rem;
+        display: block;
+        order: 2;
+    }
     @media screen and (min-width: 960px) {
         .grid-ish > *:first-child {
             order: 2;
