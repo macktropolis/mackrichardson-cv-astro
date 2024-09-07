@@ -6,52 +6,179 @@ import Social from "./Social.astro";
 const { siteName, url, favicon, logo, author } = site;
 const { title, description } = Astro.props;
 ---
+
 <section id="profile">
-    <img src="/assets/images/mack-richardson.jpg" alt="Mack Richardson" width="500" height="500" id="profile-pic" />
+    <div class="avatar" data-tooltip="Mack Richardson">
+        <img
+            src="/assets/images/mack-richardson.jpg"
+            alt="Mack Richardson"
+            width="500"
+            height="500"
+            id="profile-pic"
+        />
+    </div>
     <div class="grid-ish">
         <div class="bio">
-            <p>Mack Richardson is a seasoned FileMaker and web developer with over two decades of experience. He has a passion for creating efficient, user-friendly applications that solve real-world problems.</p>
+            <p>
+                Mack Richardson is a seasoned FileMaker and web developer with
+                over two decades of experience. He has a passion for creating
+                efficient, user-friendly applications that solve real-world
+                problems.
+            </p>
             <a href="#mission" class="button">Contact Me</a>
             <Social />
         </div>
         <div class="timeline">
             <h5 class="center">Work Experience</h5>
-            <hr />
+            <p class="center">
+                <small>Click the ▶︎ to see more details</small>
+            </p>
             <ul>
                 <li>
-                    <date>2024 - Present</date>
-                    <span>&rarr;</span> 
-                    <b>LuminFire</b> 
-                    <span>&rarr;</span>
-                    Solutions Architect
+                    <details>
+                        <summary>
+                            <date>2024 - Present</date>
+                            <span>&rarr;</span>
+                            <b>LuminFire</b>
+                            <span>&rarr;</span>
+                            Solutions Architect
+                        </summary>
+                        <ul>
+                            <li>
+                                Work directly with clients to build amazing
+                                FileMaker solutions, either built from scratch
+                                or using the BrilliantHub suite of applications.
+                            </li>
+                            <li>
+                                Write technical articles for the LuminFire
+                                website to further the company's marketing
+                                efforts.
+                            </li>
+                            <li>
+                                Work on the BrilliantHub and BrilliantConnect
+                                application teams to continuously improve
+                                performance and add new features.
+                            </li>
+                            <li>
+                                Scrum Master for the FileMaker Development Team
+                                to help balance developer workloads with Agile
+                                Development targets.
+                            </li>
+                        </ul>
+                    </details>
                 </li>
                 <li>
-                    <date>2023</date>
-                    <span>&rarr;</span>
-                    <b>Codence</b> 
-                    <span>&rarr;</span>
-                    Application Developer
+                    <details>
+                        <summary
+                            ><date>2023</date>
+                            <span>&rarr;</span>
+                            <b>Codence</b>
+                            <span>&rarr;</span>
+                            Application Developer
+                        </summary>
+                        <ul>
+                            <li>
+                                Worked as a member of several project teams to
+                                improve the performance and reliability of
+                                client FileMaker solutions.
+                            </li>
+                            <li>
+                                Wrote technical articles for the Codence website
+                                to further the company's marketing efforts.
+                            </li>
+                            <li>
+                                Coded new features for the company's internal
+                                CRM in support of the company's sales process
+                            </li>
+                        </ul>
+                    </details>
                 </li>
                 <li>
-                    <date>2014 - 2023</date>
-                    <span>&rarr;</span>
-                    <b>IF Group, LLC</b> 
-                    <span>&rarr;</span>
-                    IT Operations Manager
+                    <details>
+                        <summary
+                            ><date>2014 - 2023</date>
+                            <span>&rarr;</span>
+                            <b>IF Group, LLC</b>
+                            <span>&rarr;</span>
+                            IT Operations Manager
+                        </summary>
+                        <ul>
+                            <li>
+                                Designed, coded and managed the Bariatric Eating
+                                e-commerce website.
+                            </li>
+                            <li>
+                                Developed internal applications using Claris
+                                FileMaker which improved efficiency among remote
+                                employees working in the United States, Canada
+                                and Australia.
+                            </li>
+                            <li>
+                                Implemented integrations between the e-commerce
+                                website, external services and multiple social
+                                media platforms.
+                            </li>
+                            <li>
+                                Developed and integrated a mobile application
+                                with the e-commerce website.
+                            </li>
+                        </ul>
+                    </details>
                 </li>
                 <li>
-                    <date>2014 - 2017</date>
-                    <span>&rarr;</span>
-                    <b>Purchase Clinic</b> 
-                    <span>&rarr;</span>
-                    Web Developer
+                    <details>
+                        <summary
+                            ><date>2014 - 2017</date>
+                            <span>&rarr;</span>
+                            <b>Purchase Clinic</b>
+                            <span>&rarr;</span>
+                            Web Developer
+                        </summary>
+                        <ul>
+                            <li>
+                                Built and managed MySQL databases used as the
+                                data layer for the customer portal
+                            </li>
+                            <li>
+                                Developed internal applications using Claris
+                                FileMaker used by company employees for adding
+                                and updating data
+                            </li>
+                            <li>
+                                Integreted FileMaker apps with MySQL databases
+                            </li>
+                        </ul>
+                    </details>
                 </li>
                 <li>
-                    <date>2008 - 2022</date>
-                    <span>&rarr;</span>
-                    <b>Volvo Group</b> 
-                    <span>&rarr;</span>
-                    Application Developer
+                    <details>
+                        <summary
+                            ><date>2008 - 2022</date>
+                            <span>&rarr;</span>
+                            <b>Volvo Group</b>
+                            <span>&rarr;</span>
+                            Application Developer
+                        </summary>
+                        <ul>
+                            <li>
+                                Developed new and expanded existing FileMaker
+                                applications to support business operations
+                                ranging from order/backorder management to
+                                engineering and production planning
+                            </li>
+                            <li>
+                                Built a FileMaker reporting tool to aggregate
+                                data from multiple data silos across various
+                                tech platforms to provide a single reporting
+                                dashboard for C-level managers
+                            </li>
+                            <li>
+                                Supported the FileMaker user base across
+                                multiple business units within Volvo Group and
+                                Mack Trucks
+                            </li>
+                        </ul>
+                    </details>
                 </li>
             </ul>
         </div>
@@ -88,15 +215,8 @@ const { title, description } = Astro.props;
         display: inline-block;
         margin-block: 1rem;
     }
-    #profile-pic {
-        border-radius: 100%;
-        display: block;
-        margin-bottom: 10rem;
-        margin-inline: auto;
-        height: auto;
-        width: clamp( 250px, 90%, 500px );
-    }
     .timeline ul {
+        font-size: 1.25rem;
         list-style: none;
         margin: 0;
         padding: 0;
@@ -113,5 +233,81 @@ const { title, description } = Astro.props;
     }
     .timeline span {
         color: hsl(204, 78%, 61%);
+    }
+    .timeline ul li details ul li {
+        border: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 1rem;
+        padding-block: 0.5rem;
+        padding-left: 2rem;
+        max-width: 100%;
+    }
+    .timeline ul li details ul li::before {
+        content: "✔";
+        display: block;
+        margin-right: 1rem;
+    }
+    .timeline p.center {
+        margin-bottom: 0;
+    }
+    small {
+        opacity: 0.75;
+        font-size: 0.75rem;
+    }
+    .avatar {
+        display: grid;
+        justify-content: center;
+        margin-inline: auto;
+        margin-bottom: 10rem;
+        max-width: fit-content;
+        position: relative;
+    }
+    .avatar::before,
+    .avatar::after {
+        --scale: 0;
+        --arrow-size: 10px;
+        --tooltip-color: hsl(0, 0%, 0%, 0.75);
+
+        position: absolute;
+        top: -0.25rem;
+        left: 50%;
+        transform: translateX(-50%) translateY(var(--translate-y, 0))
+            scale(var(--scale));
+        transition: 150ms transform;
+        transform-origin: bottom center;
+    }
+    .avatar::before {
+        --translate-y: calc(-100% - var(--arrow-size));
+
+        content: attr(data-tooltip);
+        color: white;
+        padding: 1rem;
+        border-radius: 0.3rem;
+        text-align: center;
+        width: max-content;
+        max-width: 100%;
+        background: var(--tooltip-color);
+    }
+
+    .avatar:hover::before,
+    .avatar:hover::after {
+        --scale: 1;
+    }
+    .avatar::after {
+        --translate-y: calc(-1 * var(--arrow-size));
+
+        content: "";
+        border: var(--arrow-size) solid transparent;
+        border-top-color: var(--tooltip-color);
+        transform-origin: top center;
+    }
+    #profile-pic {
+        border-radius: 100%;
+        margin-inline: auto;
+        height: auto;
+        position: relative;
+        width: clamp(250px, 90%, 500px);
     }
 </style>

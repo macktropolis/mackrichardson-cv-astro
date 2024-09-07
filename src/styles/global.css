@@ -53,7 +53,8 @@ a {
 a:hover {
     color: hsl(204, 78%, 61%, 1);
 }
-img {
+img,
+.avatar {
     animation: appear ease;
     animation-timeline: view();
     animation-range: entry 0 cover 40%;
