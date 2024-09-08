@@ -188,13 +188,10 @@ const { title, description } = Astro.props;
 
 <style>
     #profile {
-        padding: 10rem 5rem;
+        padding: 5rem 0;
     }
     #profile h5 {
         font-size: 2rem;
-    }
-    .grid-ish {
-        max-width: 100ch;
     }
     .grid-ish > * {
         padding-inline: 2rem;
@@ -215,6 +212,9 @@ const { title, description } = Astro.props;
     .button {
         display: inline-block;
         margin-block: 1rem;
+    }
+    .timeline {
+        margin-top: 10rem;
     }
     .timeline ul {
         font-size: 1.25rem;
@@ -291,7 +291,6 @@ const { title, description } = Astro.props;
         max-width: 100%;
         background: var(--tooltip-color);
     }
-
     .avatar:hover::before,
     .avatar:hover::after {
         --scale: 1;
@@ -310,5 +309,10 @@ const { title, description } = Astro.props;
         height: auto;
         position: relative;
         width: clamp(250px, 90%, 500px);
+    }
+    @media screen and (min-width: 960px) {
+        .timeline {
+            margin-top: 0;
+        }
     }
 </style>

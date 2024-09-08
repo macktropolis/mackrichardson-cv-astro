@@ -1,3 +1,5 @@
+@import url("site__header.css");
+
 @keyframes appear {
     from {
         opacity: 0;
@@ -9,17 +11,27 @@
     }
 }
 
+:root {
+    --color-dark: 252, 6%, 17%;
+    --color-light: 0, 0%, 97%;
+    --color-brand: 204, 78%, 61%;
+    --color-brand-alt: 210, 57%, 44%;
+
+    --font-display: "Playfair Display", system-ui;
+    --font-sans: "Lato", system-ui;
+}
+
 body {
-    background-color:hsl(252, 6%, 17%);
-    color: hsl(0, 0%, 97%);
-    font-family: "Lato", system-ui;
+    background-color: hsl(var(--color-dark));
+    color: hsl(var(--color-light));
+    font-family: var(--font-sans);
     font-size: 1.4rem;
     font-weight: 400;
     font-style: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Playfair Display", system-ui;
+    font-family: var(--font-display);
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
@@ -41,17 +53,17 @@ p {
     line-height: 150%;
 }
 hr {
-        background-color: hsl(0, 0%, 96%, 0.25);
+        background-color: hsl(var(--color-light), 0.25);
         height: 5px;
         margin-top: 2rem;
         width: 3vw;
-    }
+}
 a {
-    color: hsl(204, 78%, 61%, 0.9);
+    color: hsl(var(--color-brand), 0.9);
     text-decoration: none;
 }
 a:hover {
-    color: hsl(204, 78%, 61%, 1);
+    color: hsl(var(--color-brand), 1);
 }
 img,
 .avatar {
@@ -60,14 +72,17 @@ img,
     animation-range: entry 0 cover 40%;
 }
 .button {
-    background-color: hsl(204, 78%, 61%);
-    color: hsl(0, 0%, 100%);
+    background-color: hsl(var(--color-brand));
+    display: block;
+    color: hsl(var(--color-light));
     padding: 1rem 2rem;
+    text-align: center;
     transition: all 0.4s ease;
+    width: 100%;
 }
 .button:hover {
-    background-color: hsl(210, 57%, 44%);
-    color: hsl(0, 0%, 100%);
+    background-color: hsl(var(--color-brand-alt));
+    color: hsl(var(--color-light));
 }
 .card-wrapper {
         display: grid;
@@ -76,9 +91,9 @@ img,
         gap: 1rem;
 }
 .card {
-    background-color: hsl(0, 0%, 100%, 0.50);;
+    background-color: hsl(var(--color-light), 0.50);;
     border-radius: 1rem;
-    color: hsl(252, 6%, 17%);
+    color: hsl(var(--color-dark));
     display: grid;
     align-items: center;
     padding: 1rem 2rem;
@@ -102,11 +117,9 @@ img,
     width: 100%;
 }
 .grid-ish {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: block;
     margin-inline: auto;
-    max-width: 125ch;
+    max-width: 100ch;
 }
 .grid-ish > * {
     flex: 1 1 50%;
@@ -118,4 +131,16 @@ img,
 }
 .grid-ish .details hr {
     margin-bottom: 2rem;
-}   
+}
+
+/* ------ media query for tablet size and larger ------ */
+@media screen and (min-width: 960px) {
+    .button {
+        width: fit-content;
+    }
+    .grid-ish {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}

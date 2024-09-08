@@ -30,8 +30,6 @@ const mailto = "mailto:" + email;
 <style>
     #mission {
         background: hsl(0, 0%, 96%, 0.2);
-    }
-    .project {
         padding: 5rem;
     }
     .project h4 {
@@ -55,30 +53,16 @@ const mailto = "mailto:" + email;
         margin-inline: auto;
         max-width: 80%;
     }
-    .grid-ish {
-        display: flex;
-        flex-direction: column;
-        margin-inline: auto;
-        max-width: 100ch;
-    }
-    @media screen and (min-width: 1024px) {
-        .grid-ish {
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
-        .grid-ish > * {
-            flex: 1 1 50%;
-            padding-inline: 1rem;
-        }
-    }
-    .details {
-        display: grid;
-        align-items: center;
-    }
     .buttons {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
         gap: 1rem;
+    }
+    
+    @media screen and (min-width: 960px) {
+        .project {
+            padding: 5rem;
+        }
     }
 </style>

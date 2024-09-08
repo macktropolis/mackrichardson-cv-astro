@@ -1,0 +1,22 @@
+{
+    "nav": [
+        { 
+          "link": "#profile", 
+          "name": "Profile", 
+          "class": "nav__profile",
+          "target": ""
+        },
+        { 
+          "link": "#projects", 
+          "name": "Project", 
+          "class": "nav__projects",
+          "target": ""
+        },
+        { 
+          "link": "#mission", 
+          "name": "Mission", 
+          "class": "nav__mission",
+          "target": ""
+        }
+  ]
+}

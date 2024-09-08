@@ -1,0 +1,36 @@
+---
+// data imports
+import * as site from "../data/site.json";
+import Brand from "./Brand.astro";
+import Nav from "./Nav.astro";
+
+const { siteName, logo, author } = site;
+const { title, description } = Astro.props;
+---
+<header id="site">
+    <Brand />
+    <Nav />
+</header>
+
+<style>
+    header#site {
+        background-color:hsl(252, 6%, 17%);
+        background: linear-gradient(0deg, rgba(42,41,46,0) 0%, rgba(42,41,46,1) 10%);
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-inline: auto;
+        padding: 1rem;
+        width: 100%;
+        z-index: 1000;
+    }
+    header#site section {
+        display: grid;
+        justify-content: center;
+    }
+    header#site section #site-logo {
+        filter: invert(66%) sepia(27%) saturate(4932%) hue-rotate(178deg) brightness(102%) contrast(83%);
+    }
+</style>
