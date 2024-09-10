@@ -1,5 +1,3 @@
-@import url("site__header.css");
-
 @keyframes appear {
     from {
         opacity: 0;
@@ -16,6 +14,7 @@
     --color-light: 0, 0%, 97%;
     --color-brand: 204, 78%, 61%;
     --color-brand-alt: 210, 57%, 44%;
+    --color-black: 0, 0%, 0%;
 
     --font-display: "Playfair Display", system-ui;
     --font-sans: "Lato", system-ui;

@@ -4,10 +4,42 @@ import * as site from "../data/site.json";
 import Brand from "./Brand.astro";
 import HeaderNav from "./HeaderNav.astro";
 
-const { siteName, logo, author, url } = site;
-const { title, description } = Astro.props;
+const { siteName, url } = site;
+const { description } = Astro.props;
 ---
+
 <header id="site__header">
-  <Brand siteName={siteName} description={description} url={url} />
-  <HeaderNav />
+  <div class="grid">
+    <Brand siteName={siteName} description={description} url={url} />
+    <HeaderNav />
+  </div>
 </header>
+
+<style>
+  #site__header {
+    background: hsl(var(--color-dark), 1);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+  }
+  #site__header.scrolled {
+    box-shadow: 0 10px 10px hsl(var(--color-black), 1);
+    border-bottom: 1px solid hsl(var(--color-black), 0.25);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 100px auto;
+    justify-content: center;
+    align-items: center;
+  }
+  a {
+    border: none;
+  }
+  /* ------ media query for tablet size or larger ------ */
+  @media screen and (min-width: 960px) {
+    .grid {
+      justify-content: space-evenly;
+    }
+  }
+</style>

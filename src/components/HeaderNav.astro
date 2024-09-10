@@ -1,47 +1,107 @@
 ---
-// component imports
-// import Nav from "./NavSite.astro";
+import * as site from "../data/site.json";
+const { email } = site;
 ---
 
 <input id="nav__toggle" class="nav__toggle" type="checkbox" />
 <nav class="nav" id="site__nav" aria-label="Primary">
-  <ul role="list" class="nav__list">
-    <li><a href="#profile" class="nav__profile">Profile</a></li>
-    <li><a href="#projects" class="nav__projects">Projects</a></li>
-    <li><a href="#mission" class="nav__mission">Mission</a></li>
-  </ul>
+    <ul role="list" class="nav__list">
+        <li>
+            <a href="#profile" class="nav__profile"
+                ><i class="fa-solid fa-user"></i> Profile</a
+            >
+        </li>
+        <li>
+            <a href="#projects" class="nav__projects"
+                ><i class="fa-solid fa-chart-gantt"></i> Projects</a
+            >
+        </li>
+        <li>
+            <a href="#mission" class="nav__mission"
+                ><i class="fa-sharp fa-solid fa-bullseye-arrow"></i> Mission</a
+            >
+        </li>
+        <li>
+            <a
+                href={"mailto:" + email}
+                title="Contact Mack"
+                class="nav__contact"
+                ><i class="fa-solid fa-envelope"></i> Contact Me</a
+            >
+        </li>
+    </ul>
 </nav>
 <label class="nav__toggle-label" for="nav__toggle"><span></span></label>
 
 <style>
+    .nav {
+        background-color: hsl(var(--color-dark), 0.98);
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5 rem 1rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transform: scale(1, 0);
+        transform-origin: top;
+        transition: transform 400ms ease-in-out;
+        width: 100%;
+        z-index: 100;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    ul li {
+        display: grid;
+        place-items: center;
+        margin-bottom: var(--sz-1x, 1rem);
+        margin-inline: var(--sz-1x, 1rem);
+    }
     a {
-        color: hsl(var(--color-brand), 0.9);
-        font-weight: 700;
+        color: hsl(var(--color-light), 0.5);
+        display: block;
+        font-family: var(--font-display);
+        font-weight: 900;
+        padding: var(--sz-2x, 2rem);
+        opacity: 0;
         position: relative;
-        text-decoration: none; /* Remove the default underline */
+        text-decoration: none;
+        text-align: center;
         text-transform: uppercase;
         transition: all 0.4s ease;
+        width: 100%;
+    }
+    a i {
+        margin-right: 0.5rem;
     }
     a:hover {
-        color: hsl(var(--color-brand), 1);
+        color: hsl(var(--color-brand));
     }
     a::before,
     a::after {
-        content: '';
+        content: "";
         position: absolute;
         left: 50%;
         width: 0;
         height: 3px; /* Thickness of the line */
-        background-color: hsl(204, 78%, 61%);
-        transition: width 0.4s ease, left 0.4s ease, opacity 0.4s ease;
+        background-color: hsl(var(--color-brand));
+        transition:
+            width 0.4s ease,
+            left 0.4s ease,
+            opacity 0.4s ease;
         opacity: 0;
     }
     a::before {
-        top: 0; /* Position line above the text */
+        top: -0.5rem; /* Position line above the text */
         transform: translateY(-50%); /* Adjust to align with vertical center */
     }
     a::after {
-        bottom: 0; /* Position line below the text */
+        bottom: -0.5rem; /* Position line below the text */
         transform: translateY(50%); /* Adjust to align with vertical center */
     }
     a:hover::before,
@@ -50,4 +110,112 @@
         width: 100%;
         opacity: 1;
     }
-  </style>
+    .nav__contact {
+        color: hsl(var(--color-brand), 0.75);
+    }
+    .nav__contact:hover {
+        color: hsl(var(--color-brand), 1);
+    }
+    .nav__toggle {
+        display: none;
+    }
+    .nav__toggle:checked ~ nav {
+        transform: scale(1, 1);
+    }
+    .nav__toggle:checked ~ nav ul {
+        padding-block: var(--sz-100, 1rem);
+    }
+    .nav__toggle:checked ~ nav ul li {
+        padding-block: var(--sz-050, 0.5rem);
+    }
+    .nav__toggle:checked ~ nav ul li a {
+        font-size: clamp(var(--sz-3x, 3rem), 2rem, var(--sz-1x, 1rem));
+        opacity: 1;
+        transition: opacity 250ms ease-in-out 250ms;
+    }
+    .nav__toggle:checked ~ .nav__toggle-label {
+        transform: rotate(-45deg);
+    }
+    .nav__toggle:checked ~ .nav__toggle-label span:before {
+        opacity: 0;
+        bottom: auto;
+    }
+    .nav__toggle:checked ~ .nav__toggle-label span:after {
+        transform: rotate(90deg);
+        top: auto;
+    }
+    .nav__toggle-label {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: clamp(1rem, 2rem, 3rem);
+    }
+    .nav__toggle-label span,
+    .nav__toggle-label span:before,
+    .nav__toggle-label span:after {
+        background-color: hsl(var(--color-light));
+        border-radius: 2px;
+        display: block;
+        height: 5px;
+        position: relative;
+        transition: all ease-in-out 250ms;
+        width: 1.5rem;
+    }
+    .nav__toggle-label span:before,
+    .nav__toggle-label span:after {
+        content: "";
+        position: absolute;
+    }
+    .nav__toggle-label span:before {
+        bottom: var(--sz-1x, 0.75rem);
+    }
+    .nav__toggle-label span:after {
+        top: var(--sz-1x, 0.75rem);
+    }
+    .scrolled {
+        padding: var(--sz-2x, 2rem) var(--sz-1x, 1rem);
+    }
+
+    /* ------ media query for tablet size or larger ------ */
+    @media screen and (min-width: 960px) {
+        .nav {
+            all: unset;
+        }
+        .nav ul {
+            flex-direction: row;
+            align-content: center;
+            justify-content: flex-end;
+            width: 100%;
+        }
+        .nav ul li {
+            margin: 0;
+            width: fit-content;
+        }
+        .nav ul li a {
+            display: block;
+            opacity: 1;
+            padding: 0 var(--sz-1x, 1rem);
+            position: relative;
+            text-align: center;
+            transition: all 300ms ease-in-out;
+            z-index: 100;
+        }
+        .nav__toggle-label {
+            display: none;
+        }
+        .nav ul {
+            padding: 0;
+        }
+        .nav ul li {
+            padding: var(--sz-1x, 1rem);
+        }
+        .nav ul li.ext-link {
+            display: none;
+        }
+        .scrolled .nav ul li a::before {
+            top: calc(var(--sz-3x, 3rem) * -1);
+        }
+    }
+</style>

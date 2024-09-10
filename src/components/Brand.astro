@@ -6,16 +6,41 @@ const { siteName, logo, author } = site;
 ---
 
 <section class="brand">
-    <a href="#home" title={siteName + " Logo"}><img src={logo} alt={author + " Logo"} class="site-logo" height="100" width="100" /></a>
+    <a href="#home" title={siteName + " Logo"}
+        ><img
+            src={logo}
+            alt={author + " Logo"}
+            class="site__logo"
+            height="100"
+            width="100"
+        /></a
+    >
 </section>
 
 <style>
     .brand {
         display: grid;
+        align-items: center;
         justify-content: center;
+        width: 100px;
     }
-
-    .brand .site-logo {
-        filter: invert(66%) sepia(27%) saturate(4932%) hue-rotate(178deg) brightness(102%) contrast(83%);
+    h1,
+    h2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-indent: -10000px;
+        overflow: hidden;
+    }
+    .site__logo {
+        height: auto;
+        opacity: 0.5;
+        transition: all 200ms ease-in-out;
+        width: 100px;
+    }
+    .site__logo:hover {
+        filter: invert(66%) sepia(27%) saturate(4932%) hue-rotate(178deg)
+            brightness(102%) contrast(83%);
+        opacity: 1;
     }
 </style>

@@ -9,12 +9,12 @@ import Mission from "../components/Mission.astro";
 import Certifications from "../components/Certifications.astro";
 import Clients from "../components/Clients.astro";
 
-const { siteName, description } = site;
+const { description } = site;
 const title = "Mack Richardson";
 ---
 
 <Layout title={title} description={description}>
-	<section id="hero">
+	<section id="hero" class="home-intro">
 		<div>
 			<h1>{title}</h1>
 			<h2><span>a</span> FileMaker <span>&</span> Web Developer</h2>
@@ -54,10 +54,10 @@ const title = "Mack Richardson";
 		margin-bottom: clamp(0.5rem, 1rem, 1.5rem);
 	}
 	#hero h2 {
-		font-family: 'Libre Baskerville', serif;
+		font-family: "Libre Baskerville", serif;
 		font-size: clamp(1.5rem, 3vw, 7rem);
 		font-weight: 400;
-    	font-style: normal;
+		font-style: normal;
 	}
 	#hero h2 span {
 		font-style: italic;
