@@ -18,6 +18,7 @@ const title = "Mack Richardson";
 		<div>
 			<h1>{title}</h1>
 			<h2><span>a</span> FileMaker <span>&</span> Web Developer</h2>
+			<div class="scroll-icon"></div>
 		</div>
 	</section>
 	<Profile />
@@ -29,6 +30,10 @@ const title = "Mack Richardson";
 
 <style>
 	#hero {
+		--scroll-icon-height: 40px;
+		--scroll-icon-width: 26px;
+		--scroll-dot-width: 9px;
+
 		display: grid;
 		align-items: center;
 		height: 100dvh;
@@ -61,5 +66,48 @@ const title = "Mack Richardson";
 	}
 	#hero h2 span {
 		font-style: italic;
+	}
+	@keyframes scroll-move {
+		0% {
+			transform: translateY(0);
+			opacity: 1;
+		}
+
+		75% {
+			transform: translateY(16px);
+			opacity: 0;
+		}
+
+		80% {
+			transform: translateY(0);
+			opacity: 0;
+		}
+
+		100% {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+	.scroll-icon {
+		border-radius: 20px;
+		border: 2px solid hsl(var(--color-light), 0.75);
+		display: block;
+		height: 40px;
+		inset: auto auto 32px calc(50% - (var(--scroll-icon-width) / 2));
+		padding: 2px;
+		position: absolute;
+		bottom: 5rem;
+		width: var(--scroll-icon-width);
+	}
+	.scroll-icon::after {
+		animation: scroll-move 3s infinite;
+		background-color: hsl(var(--color-white), 1);
+		border-radius: 50%;
+		content: "";
+		height: var(--scroll-dot-width);
+		left: calc(50% - (var(--scroll-dot-width) / 2));
+		position: absolute;
+		top: 5px;
+		width: var(--scroll-dot-width);
 	}
 </style>
