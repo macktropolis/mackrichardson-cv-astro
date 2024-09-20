@@ -17,10 +17,19 @@ const mailto = "mailto:" + email;
         <div class="details">
             <article>
                 <h4>{title}</h4>
-                <p>Create smart, effective and beautiful FileMaker solutions and websites that help people solve real-world problems.</p>
+                <p>
+                    Create smart, effective and beautiful FileMaker solutions
+                    and websites that help people solve real-world problems.
+                </p>
                 <div class="buttons">
-                    <a href={mailto} title="Email Mack" class="button"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp; Email Me</a>
-                    <a href={scheduler} title="Schedule a Call" class="button"><i class="fa-solid fa-calendar-days"></i>&nbsp;&nbsp;Schedule a Meeting</a>
+                    <a href={mailto} title="Email Mack" class="button"
+                        ><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp; Email
+                        Me</a
+                    >
+                    <a href={scheduler} title="Schedule a Call" class="button"
+                        ><i class="fa-solid fa-calendar-days"
+                        ></i>&nbsp;&nbsp;Schedule a Meeting</a
+                    >
                 </div>
             </article>
         </div>
@@ -59,7 +68,7 @@ const mailto = "mailto:" + email;
         flex-direction: row;
         gap: 1rem;
     }
-    
+
     @media screen and (min-width: 960px) {
         .project {
             padding: 5rem;
