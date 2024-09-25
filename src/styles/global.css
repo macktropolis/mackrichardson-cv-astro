@@ -61,6 +61,7 @@ h3 {
 
 p {
     line-height: 150%;
+    text-wrap: balance;
 }
 hr {
         background-color: hsl(var(--color-light), 0.25);
@@ -141,6 +142,16 @@ img,
 }
 .grid-ish .details hr {
     margin-bottom: 2rem;
+}
+
+/* ------ global footer styles ------ */
+footer#site-footer #social {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-inline: auto;
 }
 
 /* ------ media query for tablet size and larger ------ */

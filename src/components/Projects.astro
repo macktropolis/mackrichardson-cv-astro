@@ -6,7 +6,7 @@ import CraigGilmore from "../content/projects/craig-gilmore.astro";
 import ComixBin from "../content/projects/comixbin.astro";
 
 const { siteName, url, favicon, logo, author } = site;
-const title= "A Few Projects";
+const title = "A Few Projects";
 ---
 
 <section id="projects">
@@ -30,7 +30,7 @@ const title= "A Few Projects";
         width: 100%;
     }
     h3 {
-        font-size: 5rem;
+        font-size: clamp(3rem, 8vw, 5rem);
         text-align: center;
     }
     .grid-ish {

@@ -10,10 +10,12 @@ const { title, description } = Astro.props;
 
 <footer id="site-footer">
     <Brand />
-    <p>&copy<script type="text/javascript" is:inline>
-          document.write(new Date().getFullYear());
-        </script>. {author}. All Rights Reserved.</p>
-        <Social />
+    <p>
+        &copy<script type="text/javascript" is:inline>
+            document.write(new Date().getFullYear());
+        </script>. {author}. All Rights Reserved.
+    </p>
+    <Social />
 </footer>
 
 <style>

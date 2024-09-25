@@ -9,14 +9,79 @@ const title = "Certifications";
 <section id="certifications">
     <h3>{title}</h3>
     <section>
-        <a href="https://www.credly.com/badges/3b5dcd83-cc13-4f39-963c-93fc5e9969b0" title="Claris FileMaker Pro Associate" target="_blank"><img src="/assets/images/claris-filemaker-pro-associate-badge.png" alt="Claris FileMaker Pro Associate" height="150" width="150" /></a>
-        <a href="https://www.credly.com/badges/e20c1bb7-6bfd-4f2c-971a-e8ebb9a9bcd4" title="Claris FileMaker Pro Specialist" target="_blank"><img src="/assets/images/claris-filemaker-pro-specialist-badge.png" alt="Claris FileMaker Pro Specialist" height="150" width="150" /></a>
-        <a href="https://www.credly.com/badges/53bb971a-3843-41d1-ac82-2a57db838878" title="Claris FileMaker Pro Expert" target="_blank"><img src="/assets/images/claris-filemaker-pro-expert-badge.png" alt="Claris FileMaker Pro Expert" height="150" width="150" /></a>
-        <a href="https://www.credly.com/badges/f51692bf-3785-42d6-a04f-748e4ac37153" title="Claris FileMaker Server Administrator Associate" target="_blank"><img src="/assets/images/claris-filemaker-server-administrator-associate.png" alt="Claris FileMaker Server Administrator Associate" height="150" width="150" /></a>
-        <a href="https://www.credly.com/badges/ed8909f4-d800-4fea-901b-517201f8429d" title="Claris Connect Associate" target="_blank"><img src="/assets/images/claris-connect-associate-badge.png" alt="Claris Connect Associate" height="150" width="150" /></a>
-       <a href="https://www.credly.com/badges/c3b57eaa-bd32-4a22-8e2e-3b75d656218b" title="Claris Connect Specialist" target="_blank"><img src="/assets/images/claris-connect-specialist-badge.png" alt="Claris Connect Specialist" height="150" width="150" /></a>
+        <a
+            href="https://www.credly.com/badges/3b5dcd83-cc13-4f39-963c-93fc5e9969b0"
+            title="Claris FileMaker Pro Associate"
+            target="_blank"
+            ><img
+                src="/assets/images/claris-filemaker-pro-associate-badge.png"
+                alt="Claris FileMaker Pro Associate"
+                height="150"
+                width="150"
+            /></a
+        >
+        <a
+            href="https://www.credly.com/badges/e20c1bb7-6bfd-4f2c-971a-e8ebb9a9bcd4"
+            title="Claris FileMaker Pro Specialist"
+            target="_blank"
+            ><img
+                src="/assets/images/claris-filemaker-pro-specialist-badge.png"
+                alt="Claris FileMaker Pro Specialist"
+                height="150"
+                width="150"
+            /></a
+        >
+        <a
+            href="https://www.credly.com/badges/53bb971a-3843-41d1-ac82-2a57db838878"
+            title="Claris FileMaker Pro Expert"
+            target="_blank"
+            ><img
+                src="/assets/images/claris-filemaker-pro-expert-badge.png"
+                alt="Claris FileMaker Pro Expert"
+                height="150"
+                width="150"
+            /></a
+        >
+        <a
+            href="https://www.credly.com/badges/f51692bf-3785-42d6-a04f-748e4ac37153"
+            title="Claris FileMaker Server Administrator Associate"
+            target="_blank"
+            ><img
+                src="/assets/images/claris-filemaker-server-administrator-associate.png"
+                alt="Claris FileMaker Server Administrator Associate"
+                height="150"
+                width="150"
+            /></a
+        >
+        <a
+            href="https://www.credly.com/badges/ed8909f4-d800-4fea-901b-517201f8429d"
+            title="Claris Connect Associate"
+            target="_blank"
+            ><img
+                src="/assets/images/claris-connect-associate-badge.png"
+                alt="Claris Connect Associate"
+                height="150"
+                width="150"
+            /></a
+        >
+        <a
+            href="https://www.credly.com/badges/c3b57eaa-bd32-4a22-8e2e-3b75d656218b"
+            title="Claris Connect Specialist"
+            target="_blank"
+            ><img
+                src="/assets/images/claris-connect-specialist-badge.png"
+                alt="Claris Connect Specialist"
+                height="150"
+                width="150"
+            /></a
+        >
     </section>
-    <a href="https://www.credly.com/users/mack-richardson" title={author + "'s Credly Profile"} class="button" target="_blank">View All Credentials</a>
+    <a
+        href="https://www.credly.com/users/mack-richardson"
+        title={author + "'s Credly Profile"}
+        class="button"
+        target="_blank">View All Credentials</a
+    >
 </section>
 
 <style>
@@ -43,14 +108,16 @@ const title = "Certifications";
     #certifications section img {
         filter: grayscale(100%);
         opacity: 0.8;
-        transition: opacity 0.4s ease-in-out, filter 0.4s ease-in-out;
+        transition:
+            opacity 0.4s ease-in-out,
+            filter 0.4s ease-in-out;
     }
     #certifications section img:hover {
         filter: grayscale(0);
         opacity: 1;
     }
     h3 {
-        font-size: 4rem;
+        font-size: clamp(2.5rem, 8vw, 5rem);
         text-align: center;
     }
 </style>

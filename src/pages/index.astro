@@ -36,10 +36,12 @@ const title = "Mack Richardson";
 
 		display: grid;
 		align-items: center;
+		justify-content: center;
 		height: 100dvh;
 		padding: 10rem 5rem;
 		text-align: center;
 		position: relative;
+		max-width: 100%;
 	}
 	#hero::after {
 		background: url("/assets/images/logo.svg") 50% 50% no-repeat;
@@ -53,7 +55,7 @@ const title = "Mack Richardson";
 		width: 100%;
 	}
 	#hero h1 {
-		font-size: clamp(5rem, 8vw, 14rem);
+		font-size: clamp(3rem, 8vw, 14rem);
 		line-height: 100%;
 		letter-spacing: clamp(0, -0.5rem, -0.5rem);
 		margin-bottom: clamp(0.5rem, 1rem, 1.5rem);
